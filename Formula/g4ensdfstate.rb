@@ -10,6 +10,6 @@ class G4ensdfstate < Formula
   end
 
   test do
-    system "false"
+    assert_predicate pkgshare, :exist?
   end
 end
