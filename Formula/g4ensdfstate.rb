@@ -8,10 +8,9 @@ class G4ensdfstate < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/drbenmorgan/geant4"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, monterey:     "4da9667d2f91ce11377bbe68ad652c7c6f37b9e9c49ecde2a6ef7d50b3573af3"
-    sha256 cellar: :any_skip_relocation, big_sur:      "ef779219b2e52c06e92ec3d6885c6e7bd44c5c44dd08d81dd6e9fa9dce061052"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "149254f26e243dffc99ca8d6cc31489682b987e93ff32eca69ebd380edc9211a"
+    sha256 cellar: :any_skip_relocation, monterey:     "0ec47bb46b5c05fd30c14db332e053b2337ea21b84cefab41c4c46b18c0b9883"
+    sha256 cellar: :any_skip_relocation, big_sur:      "7d22dbb54d3d8109f40eccad151f0147687319f1a781dd67d765a3d49a952271"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "be337b7fa562fe730bf7fac80d4ac95ad588cdf83746c97533bac67d306eaa7b"
   end
 
   def install
