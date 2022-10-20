@@ -15,7 +15,7 @@ class G4ensdfstate < Formula
 
   def install
     (pkgshare/buildpath.basename.to_s).install Dir["./*"]
-  end  
+  end
 
   test do
     assert_predicate pkgshare, :exist?
