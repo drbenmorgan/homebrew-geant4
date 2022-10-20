@@ -4,6 +4,7 @@ class G4ensdfstate < Formula
   url "https://geant4-data.web.cern.ch/geant4-data/datasets/G4ENSDFSTATE.2.3.tar.gz"
   sha256 "9444c5e0820791abd3ccaace105b0e47790fadce286e11149834e79c4a8e9203"
   license ""
+  revision 1
 
   bottle do
     root_url "https://ghcr.io/v2/drbenmorgan/geant4"
@@ -14,7 +15,7 @@ class G4ensdfstate < Formula
   end
 
   def install
-    (pkgshare/buildpath.basename.to_s).install Dir["./*"]
+    pkgshare.install Dir["*"]
   end
 
   test do
