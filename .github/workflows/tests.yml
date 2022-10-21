@@ -16,6 +16,7 @@ jobs:
               options: --user=linuxbrew -e GITHUB_ACTIONS_HOMEBREW_SELF_HOSTED
             workdir: /github/home 
     runs-on: ${{ matrix.os }}
+    container: ${{matrix.container}}    
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
