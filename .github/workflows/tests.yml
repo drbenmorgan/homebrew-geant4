@@ -47,6 +47,9 @@ jobs:
       # Try and get to just bottling step
       - name: Try bottle
         run: |
+          ls -larthR $(brew --cellar)
+          chmod g-w $(brew --cellar)
+          ls -larthR $(brew --cellar)
           brew fetch --retry drbenmorgan/geant4/g4ensdfstate --build-bottle --force
           brew install --only-dependencies --verbose --build-bottle drbenmorgan/geant4/g4ensdfstate
           brew install --verbose --build-bottle drbenmorgan/geant4/g4ensdfstate
