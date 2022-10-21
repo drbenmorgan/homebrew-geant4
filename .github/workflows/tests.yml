@@ -38,9 +38,11 @@ jobs:
           echo $PWD
           umask
           ls -larth
+          ls -larth Formula
+          ls -larth $(brew --cellar)
           
          
-      - run: brew test-bot --only-formulae --only-json-tab --root-url=https://ghcr.io/v2/drbenmorgan/geant4
+      - run: brew test-bot --debug --only-formulae --only-json-tab --root-url=https://ghcr.io/v2/drbenmorgan/geant4
         if: github.event_name == 'pull_request'
 
       - name: Upload bottles as artifact
