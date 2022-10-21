@@ -9,6 +9,12 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-22.04, macos-12, macos-11]
+        include:
+          - os: ubuntu-22.04
+            container:
+              image: ghcr.io/homebrew/ubuntu22.04:master
+              options: --user=linuxbrew -e GITHUB_ACTIONS_HOMEBREW_SELF_HOSTED
+            workdir: /github/home 
     runs-on: ${{ matrix.os }}
     steps:
       - name: Set up Homebrew
