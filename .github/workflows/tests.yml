@@ -33,6 +33,13 @@ jobs:
 
       - run: brew test-bot --only-tap-syntax
 
+      - name: Check umask, permissions
+        run: |
+          echo $PWD
+          umask
+          ls -larth
+          
+         
       - run: brew test-bot --only-formulae --only-json-tab --root-url=https://ghcr.io/v2/drbenmorgan/geant4
         if: github.event_name == 'pull_request'
 
