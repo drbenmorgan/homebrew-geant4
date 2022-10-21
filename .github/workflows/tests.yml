@@ -54,6 +54,7 @@ jobs:
           brew audit drbenmorgan/geant4/g4ensdfstate --online --git --skip-style
           brew bottle --verbose --json drbenmorgan/geant4/g4ensdfstate --root-url=https://ghcr.io/v2/drbenmorgan/geant4 --only-json-tab
           brew bottle --merge --write --no-commit ./g4ensdfstate--2.3_3.*.bottle.json
+          tar -tvf ././g4ensdfstate--2.3_3.*.bottle.tar.gz
         if: github.event_name == 'pull_request'
         
       - name: Check umask, permissions after bottling
