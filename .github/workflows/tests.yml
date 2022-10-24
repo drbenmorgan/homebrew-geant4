@@ -39,9 +39,14 @@ jobs:
       - run: brew test-bot --only-setup
 
       - run: brew test-bot --only-tap-syntax
-      
-      - run: brew test-bot --debug --only-formulae --only-json-tab --root-url=https://ghcr.io/v2/drbenmorgan/geant4
-        if: github.event_name == 'pull_request'
+
+
+     - name: Run brew test-bot --only-formulae
+       run: |
+         mkdir ~/bottles
+         cd ~/bottles
+         brew test-bot --debug --only-formulae --only-json-tab --root-url=https://ghcr.io/v2/drbenmorgan/geant4
+       if: github.event_name == 'pull_request'
 
       - name: Upload bottles as artifact
         if: always() && github.event_name == 'pull_request'
