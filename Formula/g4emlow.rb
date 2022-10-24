@@ -6,6 +6,11 @@ class G4emlow < Formula
   license ""
   revision 1
 
+  bottle do
+    root_url "https://ghcr.io/v2/drbenmorgan/geant4"
+    sha256 cellar: :any_skip_relocation, all: "e85d2fb28048a4d79bbd6ffac6815fa8798f539b3501b3301570a03a2affcd2c"
+  end
+
   def install
     (pkgshare/buildpath.basename.to_s).install Dir["./*"]
   end
