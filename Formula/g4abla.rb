@@ -4,6 +4,7 @@ class G4abla < Formula
   url "https://geant4-data.web.cern.ch/geant4-data/datasets/G4ABLA.3.1.tar.gz"
   sha256 "7698b052b58bf1b9886beacdbd6af607adc1e099fc730ab6b21cf7f090c027ed"
   license ""
+  revision 1
 
   def install
     (pkgshare/buildpath.basename.to_s).install Dir["./*"]
