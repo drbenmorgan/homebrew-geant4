@@ -6,6 +6,11 @@ class G4radioactivedecay < Formula
   license ""
   revision 1
 
+  bottle do
+    root_url "https://ghcr.io/v2/drbenmorgan/geant4"
+    sha256 cellar: :any_skip_relocation, all: "e98696e487ca5951026cf50e5dea2454e420afc830048484fe8a9b238b98a391"
+  end
+
   def install
     (pkgshare/buildpath.basename.to_s).install Dir["./*"]
   end
