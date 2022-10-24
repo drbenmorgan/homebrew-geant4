@@ -6,6 +6,11 @@ class G4particlexs < Formula
   license ""
   revision 1
 
+  bottle do
+    root_url "https://ghcr.io/v2/drbenmorgan/geant4"
+    sha256 cellar: :any_skip_relocation, all: "1fc3f88a5b1abf421a3d039d8b6342587e722e0ab488bfaf546377678ce79151"
+  end
+
   def install
     (pkgshare/buildpath.basename.to_s).install Dir["./*"]
   end
