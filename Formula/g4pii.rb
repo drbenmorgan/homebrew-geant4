@@ -4,6 +4,7 @@ class G4pii < Formula
   url "https://geant4-data.web.cern.ch/geant4-data/datasets/G4PII.1.3.tar.gz"
   sha256 "6225ad902675f4381c98c6ba25fc5a06ce87549aa979634d3d03491d6616e926"
   license ""
+  revision 1
 
   def install
     (pkgshare/buildpath.basename.to_s).install Dir["./*"]
