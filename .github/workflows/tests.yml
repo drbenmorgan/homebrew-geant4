@@ -17,6 +17,8 @@ jobs:
             workdir: /github/home 
     runs-on: ${{ matrix.os }}
     container: ${{matrix.container}}    
+    env:
+      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
