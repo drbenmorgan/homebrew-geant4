@@ -6,6 +6,11 @@ class G4photonevaporation < Formula
   license ""
   revision 1
 
+  bottle do
+    root_url "https://ghcr.io/v2/drbenmorgan/geant4"
+    sha256 cellar: :any_skip_relocation, all: "8726b1acad188ecccfbaac0be5ce259c635572df34f0e13fbceecab58cd76839"
+  end
+
   def install
     (pkgshare/buildpath.basename.to_s).install Dir["./*"]
   end
