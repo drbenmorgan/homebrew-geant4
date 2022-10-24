@@ -6,6 +6,11 @@ class G4saiddata < Formula
   license ""
   revision 1
 
+  bottle do
+    root_url "https://ghcr.io/v2/drbenmorgan/geant4"
+    sha256 cellar: :any_skip_relocation, all: "df7ef6204a69414ccc6f8967981279b3253c2f04e06ac3e9258f3522bc2f85cc"
+  end
+
   def install
     (pkgshare/buildpath.basename.to_s).install Dir["./*"]
   end
