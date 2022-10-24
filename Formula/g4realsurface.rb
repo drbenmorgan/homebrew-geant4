@@ -6,6 +6,11 @@ class G4realsurface < Formula
   license ""
   revision 1
 
+  bottle do
+    root_url "https://ghcr.io/v2/drbenmorgan/geant4"
+    sha256 cellar: :any_skip_relocation, all: "6c9c8aadfbbe91826cc287ea5ecdd4b7dd48ba6a00fe85643c70a96ef3033083"
+  end
+
   def install
     (pkgshare/buildpath.basename.to_s).install Dir["./*"]
   end
