@@ -1,6 +1,6 @@
 class Geant4Data < Formula
   desc "Geant4 physics data metapackage"
-  homepage "https://geant4.cern.ch"
+  homepage "https://geant4.web.cern.ch"
   url "file://"+File.expand_path(__FILE__)
   version "11.0.2"
   sha256 Digest::SHA256.file(File.expand_path(__FILE__)).hexdigest
