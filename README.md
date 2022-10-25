@@ -18,7 +18,6 @@ The `geant4` formula is currently built with:
   applications
 - GDML support
 - Qt support
-- VTK support
 
 The data libraries are installed through the `geant4-data` dependency of `geant4`.
 You will need to source the `geant4.sh` script in `HOMEBREW_PREFIX/bin` to set up
