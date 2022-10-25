@@ -6,6 +6,13 @@ class Geant4Data < Formula
   sha256 Digest::SHA256.file(File.expand_path(__FILE__)).hexdigest
   revision 2
 
+  bottle do
+    root_url "https://ghcr.io/v2/drbenmorgan/geant4"
+    sha256 cellar: :any_skip_relocation, monterey:     "e459703855fbf7f45a49d82637a1ad3ee0d4e4fd3c15e3a4993f3b45b0eda36e"
+    sha256 cellar: :any_skip_relocation, big_sur:      "ed7ab997e54785c815d3e2ad337aa97348c427a3febce53da0ff93852db860cf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "5a8cee348e4022dcf49ab57dbf36f2a197e2be61205c3813186b40b3410946e8"
+  end
+
   depends_on "g4abla"
   depends_on "g4emlow"
   depends_on "g4ensdfstate"
