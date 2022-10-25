@@ -4,7 +4,7 @@ class Geant4Data < Formula
   url "file://"+File.expand_path(__FILE__)
   version "11.0.2"
   sha256 Digest::SHA256.file(File.expand_path(__FILE__)).hexdigest
-  revision 1
+  revision 2
 
   depends_on "g4abla"
   depends_on "g4emlow"
