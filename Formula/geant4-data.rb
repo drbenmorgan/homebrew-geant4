@@ -1,10 +1,10 @@
 class Geant4Data < Formula
   desc "Geant4 physics data metapackage"
-  homepage "https://geant4.cern.ch"
+  homepage "https://geant4.web.cern.ch"
   url "file://"+File.expand_path(__FILE__)
   version "11.0.2"
   sha256 Digest::SHA256.file(File.expand_path(__FILE__)).hexdigest
-  revision 1
+  revision 2
 
   depends_on "g4abla"
   depends_on "g4emlow"
@@ -27,6 +27,6 @@ class Geant4Data < Formula
   end
 
   test do
-    system "false"
+    assert_predicate pkgshare, :exist?
   end
 end
