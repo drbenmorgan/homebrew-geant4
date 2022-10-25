@@ -8,7 +8,6 @@ class Geant4 < Formula
   depends_on "cmake" => :build
   depends_on "geant4-data"
   depends_on "qt@5"
-  depends_on "vtk"
   depends_on "xerces-c"
 
   uses_from_macos "expat"
@@ -24,7 +23,6 @@ class Geant4 < Formula
       -DGEANT4_USE_QT=ON
       -DGEANT4_USE_SYSTEM_EXPAT=ON
       -DGEANT4_USE_SYSTEM_ZLIB=ON
-      -DGEANT4_USE_VTK=ON
       -DGEANT4_INSTALL_PACKAGE_CACHE=OFF
     ]
     system "cmake", "-S", ".", "-B", "build", *args
