@@ -1,11 +1,11 @@
 class Geant4 < Formula
   desc "Toolkit for simulating the passage of particles through matter"
-  homepage "https://geant4.cern.ch"
+  homepage "https://geant4.web.cern.ch"
   url "https://github.com/Geant4/geant4/archive/refs/tags/v11.0.2.tar.gz"
   sha256 "ddabe8d5cc3bd465c969f375cc43ee537ff33c17dc2943b8a4420cfa83cfcfcc"
   license ""
 
-  depends_on "cmake" => :build
+  depends_on "cmake" => [:build, :test]
   depends_on "geant4-data"
   depends_on "qt@5"
   depends_on "xerces-c"
